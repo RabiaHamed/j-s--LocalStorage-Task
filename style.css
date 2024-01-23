@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+    height: 100vh;
+}
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom,#f1f4f9,
+    #dff1ff);
+}
+section .color{
+    position: absolute;
+    filter: blur(150px);
+}
+section .color:nth-child(1){
+    width: 600px;
+    top: -350px;
+    height: 600px;
+    background-color: #a10d95;
+}
+section .color:nth-child(2){
+    width: 400px;
+    /* height: 200px; */
+    /* min-height: 100vh; */
+    left: 300px;
+    bottom: -100px;
+    /* height: 100px; */
+    background-color: #7c0830;
+}
+section .color:nth-child(3){
+    width: 300px;
+    bottom: 50px;
+    height: 300px;
+    right: 100px;
+    /* background-color: #44041a; */
+    background-color: #021127;
+
+}
+.box{
+    position: relative;
+}
+.box .squr{
+    position: absolute;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 2555, 255, 0.2);
+    border-right: 1px solid rgba(255, 2555, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 2555, 255, 0.1);
+    background: rgba(255, 2555, 255, 0.1);
+    border-radius: 60px;
+    animation: animate 10s linear infinite;
+    animation-delay: calc(-2s * var(--i));
+}
+@keyframes animate{
+    0%,100%{
+        transform: translateY(-40px);
+    }
+    50%{
+        transform: translateY(40px);
+    }
+}
+.box .squr:nth-child(1){
+    top: -50px;
+    right: -60px;
+    width: 100px;
+    height: 100px;
+}
+.box .squr:nth-child(2){
+    top: 150px;
+    left: -100px;
+    width: 120px;
+    height: 120px;
+    z-index: 2;
+}
+.box .squr:nth-child(3){
+    bottom: 50px;
+    right: -60px;
+    width: 80px;
+    height: 80px;
+    z-index: 2;
+}
+.box .squr:nth-child(4){
+    bottom: -80px;
+    left: 100px;
+    width: 50px;
+    height: 50px;
+}
+.box .squr:nth-child(5){
+    top: -80px;
+    left: 140px;
+    width: 60px;
+    height: 60px;
+}
+.container{
+    position: relative;
+    width: 400px;
+    min-height: 400px;
+    background: rgba(255, 2555, 255, 0.1);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 2555, 255, 0.5);
+    border-right: 1px solid rgba(255, 2555, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 2555, 255, 0.2);
+}
+.form{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+}
+.form h2{
+    position: relative;
+    color: #051d41;
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: 'Lemon', serif;
+    font-family: 'Quicksand', sans-serif;
+}
+.form h2::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 80px;
+    height: 5px;
+    /* background: #a10d95; */
+}
+.form .inputbox{
+    width: 100%;
+    margin-top: 20px;
+}
+.form .inputbox input{
+    width: 100%;
+    background: rgba(255, 2555, 255, 0.2);
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 1px solid rgba(255, 2555, 255, 0.5);
+    border-right: 1px solid rgba(255, 2555, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 2555, 255, 0.2);
+    font-size: 17px;
+    letter-spacing: 2px;
+    color: #44041a;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+    font-weight: 800;
+    font-family: 'Lemon', serif;
+    font-family: 'Quicksand', sans-serif;
+    /* font-family: 'Dancing Script', cursive; */
+}
+.form .inputbox input::placeholder{
+    color: #051d41;
+    font-weight: 800;
+     font-family: 'Grape Nuts', cursive;
+}
+button{
+    /* font-style: italic; */
+    cursor: pointer;
+    letter-spacing: 2px;
+    /* font-weight: 300; */
+    font-family: 'Lemon', serif;
+    font-size: 15px;
+}
+.logbtn button{
+    width: 50%;
+    /* height: 50px; */
+    background: #051d41;
+    color: #ffff;
+    padding: 10px 20px;
+    border-radius: 70px;
+    border: none;
+    outline: none;
+    /* cursor: pointer; */
+ 
+   
+}
+/* .logbtn input{
+    background: #051d41;
+    cursor: pointer;
+    color: #ffff;
+} */
